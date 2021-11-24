@@ -6,12 +6,11 @@
 /*
  * TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 !!GlobalInfo
-product: Pins v8.0
+product: Pins v10.0
 processor: MIMXRT1062xxxxA
-package_id: MIMXRT1062DVL6A
+package_id: MIMXRT1062DVJ6A
 mcu_data: ksdk2_0
-processor_version: 8.0.2
-board: MIMXRT1060-EVK
+processor_version: 10.0.0
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 
@@ -34,10 +33,69 @@ void BOARD_InitBootPins(void) {
 BOARD_InitPins:
 - options: {callFromInitBoot: 'true', coreID: core0, enableClock: 'true'}
 - pin_list:
-  - {pin_num: L14, peripheral: LPUART1, signal: RX, pin_signal: GPIO_AD_B0_13, software_input_on: Disable, hysteresis_enable: Disable, pull_up_down_config: Pull_Down_100K_Ohm,
-    pull_keeper_select: Keeper, pull_keeper_enable: Enable, open_drain: Disable, speed: MHZ_100, drive_strength: R0_6, slew_rate: Slow}
-  - {pin_num: K14, peripheral: LPUART1, signal: TX, pin_signal: GPIO_AD_B0_12, software_input_on: Disable, hysteresis_enable: Disable, pull_up_down_config: Pull_Down_100K_Ohm,
-    pull_keeper_select: Keeper, pull_keeper_enable: Enable, open_drain: Disable, speed: MHZ_100, drive_strength: R0_6, slew_rate: Slow}
+  - {pin_num: L1, peripheral: SUPPLY, signal: 'DCDC_IN, 0', pin_signal: DCDC_IN0}
+  - {pin_num: L2, peripheral: SUPPLY, signal: 'DCDC_IN, 1', pin_signal: DCDC_IN1}
+  - {pin_num: K4, peripheral: SUPPLY, signal: dcdc_in_q, pin_signal: DCDC_IN_Q}
+  - {pin_num: N1, peripheral: SUPPLY, signal: 'DCDC_GND, 0', pin_signal: DCDC_GND0}
+  - {pin_num: N2, peripheral: SUPPLY, signal: 'DCDC_GND, 1', pin_signal: DCDC_GND1}
+  - {pin_num: M1, peripheral: SUPPLY, signal: 'DCDC_LP, 0', pin_signal: DCDC_LP0}
+  - {pin_num: M2, peripheral: SUPPLY, signal: 'DCDC_LP, 1', pin_signal: DCDC_LP1}
+  - {pin_num: J5, peripheral: SUPPLY, signal: dcdc_sense, pin_signal: DCDC_SENSE}
+  - {pin_num: K3, peripheral: SUPPLY, signal: dcdc_pswitch, pin_signal: DCDC_PSWITCH}
+  - {pin_num: A1, peripheral: SUPPLY, signal: 'VSS, 0', pin_signal: VSS0}
+  - {pin_num: P1, peripheral: SUPPLY, signal: 'VSS, 1', pin_signal: VSS1}
+  - {pin_num: E2, peripheral: SUPPLY, signal: 'VSS, 2', pin_signal: VSS2}
+  - {pin_num: K2, peripheral: SUPPLY, signal: 'VSS, 3', pin_signal: VSS3}
+  - {pin_num: N5, peripheral: SUPPLY, signal: 'VSS, 5', pin_signal: VSS5}
+  - {pin_num: B5, peripheral: SUPPLY, signal: 'VSS, 4', pin_signal: VSS4}
+  - {pin_num: G7, peripheral: SUPPLY, signal: 'VSS, 6', pin_signal: VSS6}
+  - {pin_num: H7, peripheral: SUPPLY, signal: 'VSS, 7', pin_signal: VSS7}
+  - {pin_num: J7, peripheral: SUPPLY, signal: 'VSS, 8', pin_signal: VSS8}
+  - {pin_num: G8, peripheral: SUPPLY, signal: 'VSS, 9', pin_signal: VSS9}
+  - {pin_num: H8, peripheral: SUPPLY, signal: 'VSS, 10', pin_signal: VSS10}
+  - {pin_num: J8, peripheral: SUPPLY, signal: 'VSS, 11', pin_signal: VSS11}
+  - {pin_num: N8, peripheral: SUPPLY, signal: 'VSS, 12', pin_signal: VSS12}
+  - {pin_num: L9, peripheral: SUPPLY, signal: 'VSS, 13', pin_signal: VSS13}
+  - {pin_num: B10, peripheral: SUPPLY, signal: 'VSS, 14', pin_signal: VSS14}
+  - {pin_num: E13, peripheral: SUPPLY, signal: 'VSS, 15', pin_signal: VSS15}
+  - {pin_num: K13, peripheral: SUPPLY, signal: 'VSS, 16', pin_signal: VSS16}
+  - {pin_num: A14, peripheral: SUPPLY, signal: 'VSS, 17', pin_signal: VSS17}
+  - {pin_num: P14, peripheral: SUPPLY, signal: 'VSS, 18', pin_signal: VSS18}
+  - {pin_num: P11, peripheral: XTALOSC24M, signal: xtali, pin_signal: XTALI}
+  - {pin_num: N11, peripheral: XTALOSC24M, signal: xtalo, pin_signal: XTALO}
+  - {pin_num: K8, peripheral: SUPPLY, signal: VDD_USB_CAP, pin_signal: VDD_USB_CAP}
+  - {pin_num: J9, peripheral: SUPPLY, signal: 'VDD_SOC_IN, 8', pin_signal: VDD_SOC_IN8}
+  - {pin_num: H9, peripheral: SUPPLY, signal: 'VDD_SOC_IN, 7', pin_signal: VDD_SOC_IN7}
+  - {pin_num: G9, peripheral: SUPPLY, signal: 'VDD_SOC_IN, 6', pin_signal: VDD_SOC_IN6}
+  - {pin_num: F9, peripheral: SUPPLY, signal: 'VDD_SOC_IN, 5', pin_signal: VDD_SOC_IN5}
+  - {pin_num: F8, peripheral: SUPPLY, signal: 'VDD_SOC_IN, 4', pin_signal: VDD_SOC_IN4}
+  - {pin_num: F7, peripheral: SUPPLY, signal: 'VDD_SOC_IN, 3', pin_signal: VDD_SOC_IN3}
+  - {pin_num: H6, peripheral: SUPPLY, signal: 'VDD_SOC_IN, 2', pin_signal: VDD_SOC_IN2}
+  - {pin_num: G6, peripheral: SUPPLY, signal: 'VDD_SOC_IN, 1', pin_signal: VDD_SOC_IN1}
+  - {pin_num: F6, peripheral: SUPPLY, signal: 'VDD_SOC_IN, 0', pin_signal: VDD_SOC_IN0}
+  - {pin_num: M9, peripheral: SUPPLY, signal: VDD_SNVS_IN, pin_signal: VDD_SNVS_IN}
+  - {pin_num: M10, peripheral: SUPPLY, signal: VDD_SNVS_CAP, pin_signal: VDD_SNVS_CAP}
+  - {pin_num: P8, peripheral: SUPPLY, signal: VDD_HIGH_CAP, pin_signal: VDD_HIGH_CAP}
+  - {pin_num: P12, peripheral: SUPPLY, signal: VDD_HIGH_IN, pin_signal: VDD_HIGH_IN}
+  - {pin_num: P10, peripheral: SUPPLY, signal: nvcc_pll, pin_signal: NVCC_PLL}
+  - {pin_num: J6, peripheral: SUPPLY, signal: nvcc_sd0, pin_signal: NVCC_SD0}
+  - {pin_num: J10, peripheral: SUPPLY, signal: 'NVCC_GPIO, 2', pin_signal: NVCC_GPIO2}
+  - {pin_num: F10, peripheral: SUPPLY, signal: 'NVCC_GPIO, 1', pin_signal: NVCC_GPIO1}
+  - {pin_num: E9, peripheral: SUPPLY, signal: 'NVCC_GPIO, 0', pin_signal: NVCC_GPIO0}
+  - {pin_num: E6, peripheral: SUPPLY, signal: 'NVCC_EMC, 1', pin_signal: NVCC_EMC1}
+  - {pin_num: F5, peripheral: SUPPLY, signal: 'NVCC_EMC, 0', pin_signal: NVCC_EMC0}
+  - {pin_num: K9, peripheral: SUPPLY, signal: ngnd_kel0, pin_signal: NGND_KEL0}
+  - {pin_num: M7, peripheral: SRC, signal: POR_B, pin_signal: POR_B}
+  - {pin_num: K5, peripheral: SUPPLY, signal: nvcc_sd1, pin_signal: NVCC_SD1}
+  - {pin_num: N9, peripheral: XTALOSC24M, signal: rtc_xtali, pin_signal: RTC_XTALI}
+  - {pin_num: P9, peripheral: XTALOSC24M, signal: rtc_xtalo, pin_signal: RTC_XTALO}
+  - {pin_num: D8, peripheral: GPIO2, signal: 'gpio_io, 03', pin_signal: GPIO_B0_03}
+  - {pin_num: K14, peripheral: LPUART1, signal: TX, pin_signal: GPIO_AD_B0_12}
+  - {pin_num: L14, peripheral: LPUART1, signal: RX, pin_signal: GPIO_AD_B0_13}
+  - {pin_num: K7, peripheral: SNVS, signal: snvs_pmic_on_req, pin_signal: PMIC_ON_REQ}
+  - {pin_num: M8, peripheral: USB1, signal: usb_otg1_dn, pin_signal: USB_OTG1_DN}
+  - {pin_num: L8, peripheral: USB1, signal: usb_otg1_dp, pin_signal: USB_OTG1_DP}
+  - {pin_num: N6, peripheral: USB1, signal: usb_otg1_vbus, pin_signal: USB_OTG1_VBUS}
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS ***********
  */
 
@@ -48,34 +106,17 @@ BOARD_InitPins:
  *
  * END ****************************************************************************************************************/
 void BOARD_InitPins(void) {
-  CLOCK_EnableClock(kCLOCK_Iomuxc);           /* iomuxc clock (iomuxc_clk_enable): 0x03U */
+  CLOCK_EnableClock(kCLOCK_Iomuxc);           
+  CLOCK_EnableClock(kCLOCK_IomuxcSnvs);       
 
-  IOMUXC_SetPinMux(
-      IOMUXC_GPIO_AD_B0_12_LPUART1_TX,        /* GPIO_AD_B0_12 is configured as LPUART1_TX */
-      0U);                                    /* Software Input On Field: Input Path is determined by functionality */
-  IOMUXC_SetPinMux(
-      IOMUXC_GPIO_AD_B0_13_LPUART1_RX,        /* GPIO_AD_B0_13 is configured as LPUART1_RX */
-      0U);                                    /* Software Input On Field: Input Path is determined by functionality */
-  IOMUXC_SetPinConfig(
-      IOMUXC_GPIO_AD_B0_12_LPUART1_TX,        /* GPIO_AD_B0_12 PAD functional properties : */
-      0x10B0U);                               /* Slew Rate Field: Slow Slew Rate
-                                                 Drive Strength Field: R0/6
-                                                 Speed Field: medium(100MHz)
-                                                 Open Drain Enable Field: Open Drain Disabled
-                                                 Pull / Keep Enable Field: Pull/Keeper Enabled
-                                                 Pull / Keep Select Field: Keeper
-                                                 Pull Up / Down Config. Field: 100K Ohm Pull Down
-                                                 Hyst. Enable Field: Hysteresis Disabled */
-  IOMUXC_SetPinConfig(
-      IOMUXC_GPIO_AD_B0_13_LPUART1_RX,        /* GPIO_AD_B0_13 PAD functional properties : */
-      0x10B0U);                               /* Slew Rate Field: Slow Slew Rate
-                                                 Drive Strength Field: R0/6
-                                                 Speed Field: medium(100MHz)
-                                                 Open Drain Enable Field: Open Drain Disabled
-                                                 Pull / Keep Enable Field: Pull/Keeper Enabled
-                                                 Pull / Keep Select Field: Keeper
-                                                 Pull Up / Down Config. Field: 100K Ohm Pull Down
-                                                 Hyst. Enable Field: Hysteresis Disabled */
+  IOMUXC_SetPinMux(IOMUXC_GPIO_AD_B0_12_LPUART1_TX, 0U); 
+  IOMUXC_SetPinMux(IOMUXC_GPIO_AD_B0_13_LPUART1_RX, 0U); 
+  IOMUXC_SetPinMux(IOMUXC_GPIO_B0_03_GPIO2_IO03, 0U); 
+  IOMUXC_GPR->GPR27 = ((IOMUXC_GPR->GPR27 &
+    (~(BOARD_INITPINS_IOMUXC_GPR_GPR27_GPIO_MUX2_GPIO_SEL_MASK))) 
+      | IOMUXC_GPR_GPR27_GPIO_MUX2_GPIO_SEL(0x00U) 
+    );
+  IOMUXC_SetPinMux(IOMUXC_SNVS_PMIC_ON_REQ_SNVS_LP_PMIC_ON_REQ, 0U); 
 }
 
 /***********************************************************************************************************************

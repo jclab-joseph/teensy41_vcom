@@ -37,16 +37,7 @@ extern "C" {
  */
 void BOARD_InitBootPins(void);
 
-/* GPIO_AD_B0_13 (coord L14), UART1_RXD */
-/* Routed pin properties */
-#define BOARD_INITPINS_UART1_RXD_PERIPHERAL                              LPUART1   /*!< Peripheral name */
-#define BOARD_INITPINS_UART1_RXD_SIGNAL                                       RX   /*!< Signal name */
-
-/* GPIO_AD_B0_12 (coord K14), UART1_TXD */
-/* Routed pin properties */
-#define BOARD_INITPINS_UART1_TXD_PERIPHERAL                              LPUART1   /*!< Peripheral name */
-#define BOARD_INITPINS_UART1_TXD_SIGNAL                                       TX   /*!< Signal name */
-
+#define BOARD_INITPINS_IOMUXC_GPR_GPR27_GPIO_MUX2_GPIO_SEL_MASK 0x08U /*!< GPIO2 and GPIO7 share same IO MUX function, GPIO_MUX2 selects one GPIO function: affected bits mask */
 
 /*!
  * @brief Configures pin routing and optionally pin electrical features.

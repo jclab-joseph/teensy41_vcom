@@ -1,0 +1,4 @@
+C:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\drivers/fsl_gpio.h:176:24:GPIO_PinRead	8	static
+../source/appnkey-firmware-dev01.c:68:5:main	16	static
+../source/appnkey-firmware-dev01.c:103:6:appUsbTask	8	static
+../source/appnkey-firmware-dev01.c:109:6:appHelloTask	8	static

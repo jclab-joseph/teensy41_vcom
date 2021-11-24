@@ -6,13 +6,41 @@
 #ifndef _PERIPHERALS_H_
 #define _PERIPHERALS_H_
 
+/***********************************************************************************************************************
+ * Included files
+ **********************************************************************************************************************/
+#include "fsl_common.h"
+#include "fsl_snvs_lp.h"
+#include "fsl_lpuart.h"
+#include "fsl_clock.h"
+#include "usb_device_composite.h"
+
 #if defined(__cplusplus)
 extern "C" {
 #endif /* __cplusplus */
 
 /***********************************************************************************************************************
+ * Definitions
+ **********************************************************************************************************************/
+/* Definitions for BOARD_InitPeripherals functional group */
+/* Definition of peripheral ID */
+#define SNVS_PERIPHERAL SNVS
+/* Definition of peripheral ID */
+#define LPUART1_PERIPHERAL LPUART1
+/* Definition of the clock source frequency */
+#define LPUART1_CLOCK_SOURCE 80000000UL
+
+/***********************************************************************************************************************
+ * Global variables
+ **********************************************************************************************************************/
+/* SNVS LP configuration */
+extern const snvs_lp_srtc_config_t SNVS_config;
+extern const lpuart_config_t LPUART1_config;
+
+/***********************************************************************************************************************
  * Initialization functions
  **********************************************************************************************************************/
+
 void BOARD_InitPeripherals(void);
 
 /***********************************************************************************************************************

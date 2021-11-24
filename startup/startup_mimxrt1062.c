@@ -1,7 +1,7 @@
 //*****************************************************************************
 // MIMXRT1062 startup code for use with MCUXpresso IDE
 //
-// Version : 310320
+// Version : 101020
 //*****************************************************************************
 //
 // Copyright 2016-2020 NXP
@@ -652,12 +652,13 @@ extern unsigned int __bss_section_table_end;
 // Sets up a simple runtime environment and initializes the C/C++
 // library.
 //*****************************************************************************
-__attribute__ ((section(".after_vectors.reset")))
+__attribute__ ((naked, section(".after_vectors.reset")))
 void ResetISR(void) {
 
     // Disable interrupts
     __asm volatile ("cpsid i");
 
+    __asm volatile ("MSR MSP, %0" : : "r" (&_vStackTop) : );
 
 #if defined (__USE_CMSIS)
 // If __USE_CMSIS defined, then call CMSIS SystemInit code

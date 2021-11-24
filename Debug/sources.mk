@@ -21,13 +21,17 @@ component/serial_manager \
 component/uart \
 device \
 drivers \
+freertos/freertos_kernel \
+freertos/freertos_kernel/portable/GCC/ARM_CM4F \
+freertos/freertos_kernel/portable/MemMang \
 source \
+source/generated \
 startup \
 usb/device/class/cdc \
+usb/device/class/msc \
 usb/device/class \
 usb/device/source/ehci \
 usb/device/source \
 usb/phy \
 utilities \
-xip \
 

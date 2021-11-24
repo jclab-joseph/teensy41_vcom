@@ -1,0 +1,6 @@
+../source/usb_device_interface_0_cic_vcom.c:155:6:USB_DeviceInterface0CicVcomTask	8	static
+../source/usb_device_interface_0_cic_vcom.c:225:14:USB_DeviceInterface0CicVcomCallback	8	static
+../source/usb_device_interface_0_cic_vcom.c:482:14:USB_DeviceInterface0CicVcomSetConfiguration	8	static
+../source/usb_device_interface_0_cic_vcom.c:498:14:USB_DeviceInterface0CicVcomSetInterface	0	static
+../source/usb_device_interface_0_cic_vcom.c:510:14:USB_DeviceInterface1DicVcomSetInterface	0	static
+../source/usb_device_interface_0_cic_vcom.c:521:14:USB_DeviceInterface0CicVcomInit	0	static

@@ -1,0 +1,4 @@
+../source/usb_device_interface_2_msc_ram_disk.c:76:14:USB_DeviceInterface2MscRamDiskCallback	0	static
+../source/usb_device_interface_2_msc_ram_disk.c:159:14:USB_DeviceInterface2MscRamDiskSetConfiguration	0	static
+../source/usb_device_interface_2_msc_ram_disk.c:173:14:USB_DeviceInterface2MscRamDiskSetInterface	0	static
+../source/usb_device_interface_2_msc_ram_disk.c:186:14:USB_DeviceInterface2MscRamDiskInit	0	static

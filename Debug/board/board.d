@@ -1,63 +1,58 @@
 board/board.o board/board.d: ../board/board.c \
- C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\drivers/fsl_common.h \
- C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\device/fsl_device_registers.h \
- C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\device/MIMXRT1062.h \
- C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\CMSIS/core_cm7.h \
- C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\CMSIS/cmsis_version.h \
- C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\CMSIS/cmsis_compiler.h \
- C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\CMSIS/cmsis_gcc.h \
- C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\CMSIS/mpu_armv7.h \
- C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\device/system_MIMXRT1062.h \
- C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\device/MIMXRT1062_features.h \
- C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\drivers/fsl_clock.h \
- C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\drivers/fsl_common.h \
- C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\utilities/fsl_debug_console.h \
- C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\component\serial_manager/serial_manager.h \
- C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\component\serial_manager/serial_port_uart.h \
- C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\component\uart/uart.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\drivers/fsl_common.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\device/fsl_device_registers.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\device/MIMXRT1062.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\CMSIS/core_cm7.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\CMSIS/cmsis_version.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\CMSIS/cmsis_compiler.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\CMSIS/cmsis_gcc.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\CMSIS/mpu_armv7.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\device/system_MIMXRT1062.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\device/MIMXRT1062_features.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\drivers/fsl_common_arm.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\drivers/fsl_clock.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\drivers/fsl_common.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\utilities/fsl_debug_console.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\component\serial_manager/fsl_component_serial_manager.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\component\serial_manager/fsl_component_serial_port_uart.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\component\uart/fsl_adapter_uart.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\freertos\freertos_kernel\include/FreeRTOS.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\freertos\template\ARM_CM4F/FreeRTOSConfig.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\freertos\freertos_kernel\include/projdefs.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\freertos\freertos_kernel\include/portable.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\freertos\freertos_kernel\include/deprecated_definitions.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\freertos\freertos_kernel\portable\GCC\ARM_CM4F/portmacro.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\freertos\freertos_kernel\include/mpu_wrappers.h \
  ../board/board.h ../board/clock_config.h \
- C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\drivers/fsl_gpio.h \
- C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\drivers/fsl_clock.h \
- C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\drivers/fsl_iomuxc.h
-
-C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\drivers/fsl_common.h:
-
-C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\device/fsl_device_registers.h:
-
-C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\device/MIMXRT1062.h:
-
-C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\CMSIS/core_cm7.h:
-
-C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\CMSIS/cmsis_version.h:
-
-C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\CMSIS/cmsis_compiler.h:
-
-C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\CMSIS/cmsis_gcc.h:
-
-C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\CMSIS/mpu_armv7.h:
-
-C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\device/system_MIMXRT1062.h:
-
-C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\device/MIMXRT1062_features.h:
-
-C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\drivers/fsl_clock.h:
-
-C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\drivers/fsl_common.h:
-
-C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\utilities/fsl_debug_console.h:
-
-C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\component\serial_manager/serial_manager.h:
-
-C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\component\serial_manager/serial_port_uart.h:
-
-C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\component\uart/uart.h:
-
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\drivers/fsl_gpio.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\drivers/fsl_clock.h \
+ C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\drivers/fsl_iomuxc.h
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\drivers/fsl_common.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\device/fsl_device_registers.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\device/MIMXRT1062.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\CMSIS/core_cm7.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\CMSIS/cmsis_version.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\CMSIS/cmsis_compiler.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\CMSIS/cmsis_gcc.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\CMSIS/mpu_armv7.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\device/system_MIMXRT1062.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\device/MIMXRT1062_features.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\drivers/fsl_common_arm.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\drivers/fsl_clock.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\drivers/fsl_common.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\utilities/fsl_debug_console.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\component\serial_manager/fsl_component_serial_manager.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\component\serial_manager/fsl_component_serial_port_uart.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\component\uart/fsl_adapter_uart.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\freertos\freertos_kernel\include/FreeRTOS.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\freertos\template\ARM_CM4F/FreeRTOSConfig.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\freertos\freertos_kernel\include/projdefs.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\freertos\freertos_kernel\include/portable.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\freertos\freertos_kernel\include/deprecated_definitions.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\freertos\freertos_kernel\portable\GCC\ARM_CM4F/portmacro.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\freertos\freertos_kernel\include/mpu_wrappers.h:
 ../board/board.h:
-
 ../board/clock_config.h:
-
-C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\drivers/fsl_gpio.h:
-
-C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\drivers/fsl_clock.h:
-
-C:\Users\Jeffrey\Documents\MCUXpressoIDE_11.2.0_4120\workspace\evkmimxrt1060_dev_cdc_vcom_bm\drivers/fsl_iomuxc.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\drivers/fsl_gpio.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\drivers/fsl_clock.h:
+C\:\Users\jic57\Documents\MCUXpressoIDE_11.4.1_6260\workspace\appnkey-firmware-dev01\drivers/fsl_iomuxc.h:

@@ -37,10 +37,10 @@
 #define LOGIC_LED_ON  (0U)
 #define LOGIC_LED_OFF (1U)
 #ifndef BOARD_USER_LED_GPIO
-#define BOARD_USER_LED_GPIO GPIO1
+#define BOARD_USER_LED_GPIO GPIO2
 #endif
 #ifndef BOARD_USER_LED_GPIO_PIN
-#define BOARD_USER_LED_GPIO_PIN (9U)
+#define BOARD_USER_LED_GPIO_PIN (3U)
 #endif
 
 #define USER_LED_INIT(output)                                            \
@@ -142,6 +142,8 @@
 
 /* @Brief Board Bluetooth HCI UART configuration */
 #define BOARD_BT_UART_BASEADDR    LPUART3
+#define BOARD_BT_UART_INSTANCE    3
+#define BOARD_BT_UART_BAUDRATE    3000000
 #define BOARD_BT_UART_CLK_FREQ    BOARD_DebugConsoleSrcFreq()
 #define BOARD_BT_UART_IRQ         LPUART3_IRQn
 #define BOARD_BT_UART_IRQ_HANDLER LPUART3_IRQHandler

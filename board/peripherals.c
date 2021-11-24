@@ -6,15 +6,14 @@
 /* clang-format off */
 /* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
 !!GlobalInfo
-product: Peripherals v8.0
+product: Peripherals v10.0
 processor: MIMXRT1062xxxxA
-package_id: MIMXRT1062DVL6A
+package_id: MIMXRT1062DVJ6A
 mcu_data: ksdk2_0
-processor_version: 8.0.2
-board: MIMXRT1060-EVK
+processor_version: 10.0.0
 functionalGroups:
 - name: BOARD_InitPeripherals
-  UUID: 25fad66e-4cd1-4981-b8ae-fec5431af2d5
+  UUID: 6ee06985-4716-4b3a-8e36-9f248efee3da
   called_from_default_init: true
   selectedCore: core0
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
@@ -27,6 +26,14 @@ component:
   - user_definitions: ''
   - user_includes: ''
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+component:
+- type: 'uart_cmsis_common'
+- type_id: 'uart_cmsis_common_9cb8e302497aa696fdbb5a4fd622c2a8'
+- global_USART_CMSIS_common:
+  - quick_selection: 'default'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
 
 /***********************************************************************************************************************
@@ -35,10 +42,283 @@ component:
 #include "peripherals.h"
 
 /***********************************************************************************************************************
+ * BOARD_InitPeripherals functional group
+ **********************************************************************************************************************/
+/***********************************************************************************************************************
+ * SNVS initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+instance:
+- name: 'SNVS'
+- type: 'snvs_lp'
+- mode: 'general'
+- custom_name_enabled: 'false'
+- type_id: 'snvs_lp_77c4189f0d6a8937c6ced7f392587357'
+- functional_group: 'BOARD_InitPeripherals'
+- peripheral: 'SNVS'
+- config_sets:
+  - fsl_snvs_lp:
+    - snvs_lp_config:
+      - init: 'false'
+      - mc:
+        - enable: 'false'
+    - initRTC: 'true'
+    - snvs_lp_srtc_config:
+      - srtcCalEnable: 'false'
+      - srtcCalValueInt: '0'
+      - start: 'false'
+      - setDateTime: 'false'
+      - snvs_lp_srtc_datetime:
+        - year: '1970'
+        - month: '1'
+        - day: '1'
+        - hour: '0'
+        - minute: '0'
+        - second: '0'
+      - setAlarmDateTime: 'false'
+      - snvs_lp_srtc_alarm_datetime:
+        - year: '1970'
+        - month: '1'
+        - day: '1'
+        - hour: '0'
+        - minute: '0'
+        - second: '0'
+    - tampersCfg: []
+    - interruptsCfg:
+      - interruptSources: ''
+      - isInterruptEnabled: 'false'
+      - interrupt:
+        - IRQn: 'SNVS_HP_WRAPPER_IRQn'
+        - enable_interrrupt: 'enabled'
+        - enable_priority: 'false'
+        - priority: '0'
+        - enable_custom_name: 'false'
+    - quick_selection: 'QuickSelection1'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+const snvs_lp_srtc_config_t SNVS_config = {
+  .srtcCalEnable = false,
+  .srtcCalValue = 0
+};
+
+static void SNVS_init(void) {
+  /* SNVS LP SRTC initialization */
+  SNVS_LP_SRTC_Init(SNVS_PERIPHERAL, &SNVS_config);
+}
+
+/***********************************************************************************************************************
+ * NVIC initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+instance:
+- name: 'NVIC'
+- type: 'nvic'
+- mode: 'general'
+- custom_name_enabled: 'false'
+- type_id: 'nvic_57b5eef3774cc60acaede6f5b8bddc67'
+- functional_group: 'BOARD_InitPeripherals'
+- peripheral: 'NVIC'
+- config_sets:
+  - nvic:
+    - interrupt_table: []
+    - interrupts: []
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+
+/* Empty initialization function (commented out)
+static void NVIC_init(void) {
+} */
+
+/***********************************************************************************************************************
+ * LPUART1 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+instance:
+- name: 'LPUART1'
+- type: 'lpuart'
+- mode: 'polling'
+- custom_name_enabled: 'false'
+- type_id: 'lpuart_bf01db7d964092f3cf860852cba17f7e'
+- functional_group: 'BOARD_InitPeripherals'
+- peripheral: 'LPUART1'
+- config_sets:
+  - lpuartConfig_t:
+    - lpuartConfig:
+      - clockSource: 'LpuartClock'
+      - lpuartSrcClkFreq: 'BOARD_BootClockRUN'
+      - baudRate_Bps: '115200'
+      - parityMode: 'kLPUART_ParityDisabled'
+      - dataBitsCount: 'kLPUART_EightDataBits'
+      - isMsb: 'false'
+      - stopBitCount: 'kLPUART_OneStopBit'
+      - txFifoWatermark: '0'
+      - rxFifoWatermark: '1'
+      - enableRxRTS: 'false'
+      - enableTxCTS: 'false'
+      - txCtsSource: 'kLPUART_CtsSourcePin'
+      - txCtsConfig: 'kLPUART_CtsSampleAtStart'
+      - rxIdleType: 'kLPUART_IdleTypeStartBit'
+      - rxIdleConfig: 'kLPUART_IdleCharacter1'
+      - enableTx: 'true'
+      - enableRx: 'true'
+    - quick_selection: 'QuickSelection1'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+const lpuart_config_t LPUART1_config = {
+  .baudRate_Bps = 115200UL,
+  .parityMode = kLPUART_ParityDisabled,
+  .dataBitsCount = kLPUART_EightDataBits,
+  .isMsb = false,
+  .stopBitCount = kLPUART_OneStopBit,
+  .txFifoWatermark = 0U,
+  .rxFifoWatermark = 1U,
+  .enableRxRTS = false,
+  .enableTxCTS = false,
+  .txCtsSource = kLPUART_CtsSourcePin,
+  .txCtsConfig = kLPUART_CtsSampleAtStart,
+  .rxIdleType = kLPUART_IdleTypeStartBit,
+  .rxIdleConfig = kLPUART_IdleCharacter1,
+  .enableTx = true,
+  .enableRx = true
+};
+
+static void LPUART1_init(void) {
+  LPUART_Init(LPUART1_PERIPHERAL, &LPUART1_config, LPUART1_CLOCK_SOURCE);
+}
+
+/***********************************************************************************************************************
+ * USB1 initialization code
+ **********************************************************************************************************************/
+/* clang-format off */
+/* TEXT BELOW IS USED AS SETTING FOR TOOLS *************************************
+instance:
+- name: 'USB1'
+- type: 'usb'
+- mode: 'device'
+- custom_name_enabled: 'false'
+- type_id: 'usb_cbf31fb9a3cef21890d93e737c3d2690'
+- functional_group: 'BOARD_InitPeripherals'
+- peripheral: 'USB1'
+- config_sets:
+  - deviceSetting:
+    - vendor_id: '0x1FC9'
+    - product_id: '0x0094'
+    - manufacturer_string: 'NXP'
+    - product_string: 'VCOM'
+    - self_powered: 'true'
+    - max_power: '100'
+    - interfaces:
+      - 0:
+        - interface_class: 'kClassCic'
+        - setting_cic:
+          - interface_name: 'CIC VCOM'
+          - subclass: 'kSubclassAcm'
+          - protocol: 'kProtocolNone'
+          - implementation: 'kImplementationCicVcom'
+          - endpoints_settings:
+            - 0:
+              - setting_name: 'Default'
+              - endpoints:
+                - 0:
+                  - direction: 'kIn'
+                  - transfer_type: 'kInterrupt'
+                  - synchronization: 'kNoSynchronization'
+                  - usage: 'kData'
+                  - max_packet_size_fs: 'k16'
+                  - polling_interval_fs: '8'
+                  - max_packet_size_hs: 'k16'
+                  - polling_interval_hs: '7'
+                  - bRefresh: '0'
+                  - bSynchAddress: 'NoSynchronization'
+          - data_interface_count: '1'
+          - quick_selection: 'QS_INTERFACE_CIC_VCOM'
+      - 1:
+        - interface_class: 'kClassDic'
+        - setting_dic:
+          - interface_name: 'DIC VCOM'
+          - subclass: 'kSubclassNone'
+          - protocol: 'kProtocolNone'
+          - implementation: 'kImplementationDicVcom'
+          - endpoints_settings:
+            - 0:
+              - setting_name: 'Default'
+              - endpoints:
+                - 0:
+                  - direction: 'kIn'
+                  - transfer_type: 'kBulk'
+                  - synchronization: 'kNoSynchronization'
+                  - usage: 'kData'
+                  - max_packet_size_fs: 'k64'
+                  - polling_interval_fs: '0'
+                  - max_packet_size_hs: 'k512'
+                  - polling_interval_hs: '0'
+                  - bRefresh: '0'
+                  - bSynchAddress: 'NoSynchronization'
+                - 1:
+                  - direction: 'kOut'
+                  - transfer_type: 'kBulk'
+                  - synchronization: 'kNoSynchronization'
+                  - usage: 'kData'
+                  - max_packet_size_fs: 'k64'
+                  - polling_interval_fs: '0'
+                  - max_packet_size_hs: 'k512'
+                  - polling_interval_hs: '0'
+                  - bRefresh: '0'
+                  - bSynchAddress: 'NoSynchronization'
+          - quick_selection: 'QS_INTERFACE_DIC_VCOM'
+      - 2:
+        - interface_class: 'kClassMsc'
+        - setting_msc:
+          - interface_name: 'MSC RAM Disk'
+          - subclass: 'kSubclassScsi'
+          - protocol: 'kProtocolBbb'
+          - implementation: 'kImplementationRamDisk'
+          - endpoints_settings:
+            - 0:
+              - setting_name: 'Default'
+              - endpoints:
+                - 0:
+                  - direction: 'kIn'
+                  - transfer_type: 'kBulk'
+                  - synchronization: 'kNoSynchronization'
+                  - usage: 'kData'
+                  - max_packet_size_fs: 'k64'
+                  - polling_interval_fs: '0'
+                  - max_packet_size_hs: 'k512'
+                  - polling_interval_hs: '0'
+                  - bRefresh: '0'
+                  - bSynchAddress: 'NoSynchronization'
+                - 1:
+                  - direction: 'kOut'
+                  - transfer_type: 'kBulk'
+                  - synchronization: 'kNoSynchronization'
+                  - usage: 'kData'
+                  - max_packet_size_fs: 'k64'
+                  - polling_interval_fs: '0'
+                  - max_packet_size_hs: 'k512'
+                  - polling_interval_hs: '0'
+                  - bRefresh: '0'
+                  - bSynchAddress: 'NoSynchronization'
+          - quick_selection: 'QS_INTERFACE_MSC_RAM_DISK'
+ * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
+/* clang-format on */
+
+static void USB1_init(void) {
+  USB_DeviceApplicationInit();
+}
+
+/***********************************************************************************************************************
  * Initialization functions
  **********************************************************************************************************************/
 void BOARD_InitPeripherals(void)
 {
+  /* Initialize components */
+  SNVS_init();
+  LPUART1_init();
+  USB1_init();
 }
 
 /***********************************************************************************************************************
